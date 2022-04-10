@@ -5,20 +5,27 @@ import Entry from './components/Entry'
 import emojipedia from './emojipedia';
 import importer from "./components/importer"
 import PlaceData from './components/placeData';
+import { apidImage } from './components/importer';
 
 function App() {
 
+  function handleChange(){
+
+  }
+  // this is a test dummyfile for logic testing purposes, this should hold the imported file from the site
   const jsonData = [
     {
     key:'3478', 
     subject:'Philadelphia in the 60s', 
     names:'joseph mendalovsky', 
-    description:'beautiful artwork'
+    description:'A beautiful artwork that shows Philly at its best'
   }
                    ]
 
-  const twentyArtwork = [jsonData.subject] 
-  (
+  const twentyArtwork = [jsonData[0].names] 
+
+  console.log(`this is twentyArtwork ${twentyArtwork}`)
+  return(
 
     <div className=''> 
           <h1>
@@ -28,12 +35,14 @@ function App() {
 <span>
 <div className='bro'>
 
-  <input>
+  <input  type="text" name="name" value="Enter your search here..." onChange={handleChange}   />
   
-  </input>
+  
 
 <button className="btn btn-info"onClick={searchClicked}>search</button>
+<span>      <div>      </div> 
 
+ </span>
 <button className="btn btn-info"onClick={luckyClicked}>I'm feeling lucky</button>
 
 </div>

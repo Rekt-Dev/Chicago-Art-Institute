@@ -8,8 +8,8 @@ import "../App"
 
     return  <div className="term">
                  <dt className="dt">
-                    <span className='' role="img" aria-label="defualt text">
-                         {props.id}
+                    <span className='' role="img" aria-label="default text">
+                         {props.key}
                     </span> 
       
                    <span  >{props.name}</span>
