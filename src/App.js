@@ -9,10 +9,12 @@ import { apidImage } from './components/importer';
 
 function App() {
 
-  function handleChange(){
-
+  function handleChange(event){
+    const ev=event.target.value 
+    console.log(`this is ev ${event}`)
   }
   // this is a test dummyfile for logic testing purposes, this should hold the imported file from the site
+  const artworkData=[]
   const jsonData = [
     {
     key:'3478', 
@@ -22,9 +24,8 @@ function App() {
   }
                    ]
 
-  const twentyArtwork = [jsonData[0].names] 
+  const twentyArtwork = []
 
-  console.log(`this is twentyArtwork ${twentyArtwork}`)
   return(
 
     <div className=''> 
@@ -35,7 +36,7 @@ function App() {
 <span>
 <div className='bro'>
 
-  <input  type="text" name="name" value="Enter your search here..." onChange={handleChange}   />
+  <input  type="text" name="name" placeholder="Enter your search here..." onChange={handleChange}   />
   
   
 
@@ -69,6 +70,8 @@ function luckyClicked(){
 
   //randomize an artwork.
 }
+
+
 
   
 export default App

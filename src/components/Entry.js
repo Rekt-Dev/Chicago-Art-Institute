@@ -6,7 +6,7 @@ import "../App"
 
         function Entry(props){
 
-    return  <div className="term">
+    return <div className="term">
                  <dt className="dt">
                     <span className='' role="img" aria-label="default text">
                          {props.key}
